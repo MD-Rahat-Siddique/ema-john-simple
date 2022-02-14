@@ -1,0 +1,13 @@
+.item-container{
+    margin: 10px 20px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+.item-body{
+    text-align: left;
+    margin: 0px 10px;
+}
+.item-body h4{
+    color: blue;
+}

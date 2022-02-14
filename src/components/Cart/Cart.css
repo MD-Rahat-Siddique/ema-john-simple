@@ -1,3 +1,20 @@
 .cart-header{
     text-align: center;
 }
+.cart-body{
+    text-align: left;
+}
+.btn-review{
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background: goldenrod;
+    display: block;
+    margin: 5px auto;
+    cursor: pointer;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
