@@ -4,6 +4,7 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import './Review.css';
 import happyImage from '../../images/fuck.png';
+import { useNavigate } from 'react-router-dom';
 
 const Review = () => {
     const [cart, setCart] = useState([]);
@@ -43,10 +44,13 @@ const Review = () => {
         deleteFromDb(productKey);
     }
 
-    const handlePlaceOrder = () => {
-        setCart([]);
-        setOrderPlaced(true);
-        clearTheCart();
+    const navigate = useNavigate();
+
+    const handleProceedCheckout = () => {
+        // setCart([]);
+        // setOrderPlaced(true);
+        // clearTheCart();
+        navigate({ pathname: '/shipment' });
     }
     let thankYou;
     if (orderPlaced) {
@@ -64,7 +68,7 @@ const Review = () => {
             </div>
             <div className="cart-container">
                 <Cart key={cart.product?.key} cart={cart}>
-                    <button onClick={handlePlaceOrder} className="btn-review">Place Order</button>
+                    <button onClick={handleProceedCheckout} className="btn-review">Proceed Checkout</button>
                 </Cart>
             </div>
         </div>
