@@ -41,6 +41,8 @@ function Login() {
           photo: photoURL
         };
         setUser(signedInUser);
+        setLoggedInUser(signedInUser);
+        navigate(from, { replace: true });
         console.log(result);
       })
       .catch(error => {

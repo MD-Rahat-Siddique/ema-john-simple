@@ -17,7 +17,7 @@ function App(props) {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <p>Email : {loggedInUser.email}</p>
+      {/* <p>Email : {loggedInUser.email}</p> */}
       <Header></Header>
       <Routes>
         <Route path="/" element={<Shop />} />
